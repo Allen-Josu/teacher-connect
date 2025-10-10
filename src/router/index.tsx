@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
     element: <AIAssistant />,
   },
    {
-    path: getRoutePath(APPS.USERS, "ai-assistant"),
+    path: getRoutePath(APPS.USERS, "teacher-interactive"),
     element: <TeacherInteractive />,
   },
 ]);
