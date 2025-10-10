@@ -173,5 +173,5 @@ export default function StudentProfilePage() {
         </button>
       </motion.div>
     </div>
-  );
+  )
 }
