@@ -5,6 +5,7 @@ import DemoPage from "../pages/demo";
 import HomePage from "../pages/home";
 import ResourceLibrary from "../pages/resource-library";
 import AIAssistant from "../pages/ai-assistant";
+import TeacherInteractive from "../pages/teacher-interactive";
 
 export const router = createBrowserRouter([
   // Users
@@ -23,5 +24,9 @@ export const router = createBrowserRouter([
   {
     path: getRoutePath(APPS.USERS, "ai-assistant"),
     element: <AIAssistant />,
+  },
+   {
+    path: getRoutePath(APPS.USERS, "ai-assistant"),
+    element: <TeacherInteractive />,
   },
 ]);

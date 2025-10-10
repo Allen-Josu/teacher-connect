@@ -1,10 +1,8 @@
-import TeacherDashboard from "../dashboard";
-
 
 export default function DemoPage() {
   return (
     <div>
-      <TeacherDashboard />
+      <h1>hii</h1>
     </div>
-  );
+  )
 }
