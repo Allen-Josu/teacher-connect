@@ -217,7 +217,7 @@ const AIAssistant: React.FC = () => {
         <aside
           className={`${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } lg:translate-x-0 fixed lg:static w-64 bg-white h-[calc(100vh-4rem)] shadow-lg transition-transform duration-300 z-40 overflow-y-auto`}
+          } lg:translate-x-0 fixed w-64 bg-white top-16 left-0 h-[calc(100vh-4rem)] shadow-lg transition-transform duration-300 z-40 overflow-y-auto`}
         >
           <div className="p-6">
             <div className="mb-6">
@@ -311,7 +311,7 @@ const AIAssistant: React.FC = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 lg:ml-0">
+        <main className="flex-1 p-6 lg:ml-64">
           <div className="max-w-6xl mx-auto">
             {/* Generate Content Tab */}
             {selectedTab === "generate" && (
