@@ -197,6 +197,7 @@ const ResourceLibrary: React.FC = () => {
     "Hindi",
     "Computer Science",
   ];
+
   const grades = [
     "Grade 1",
     "Grade 2",
@@ -209,6 +210,7 @@ const ResourceLibrary: React.FC = () => {
     "Grade 9",
     "Grade 10",
   ];
+  
   const types = ["PDF", "Video", "Image", "Document"];
 
   const getTypeIcon = (type: string) => {
