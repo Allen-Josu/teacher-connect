@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     element: <DemoPage />,
   },
   {
-    path: getRoutePath(APPS.USERS, "home"),
+    path: getRoutePath(APPS.USERS, ""),
     element: <HomePage />,
   },
   {
