@@ -13,7 +13,6 @@ import {
   RefreshCw,
   Zap,
   Clock,
-  Users,
   Menu,
   X,
   Settings,
@@ -21,7 +20,6 @@ import {
   MessageSquare,
   Lightbulb,
   CheckCircle,
-  AlertCircle,
 } from "lucide-react";
 
 interface ChatMessage {
