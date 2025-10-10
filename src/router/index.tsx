@@ -6,6 +6,7 @@ import HomePage from "../pages/home";
 import ResourceLibrary from "../pages/resource-library";
 import AIAssistant from "../pages/ai-assistant";
 import TeacherInteractive from "../pages/teacher-interactive";
+import Login from "../pages/login";
 
 export const router = createBrowserRouter([
   // Users
@@ -28,5 +29,9 @@ export const router = createBrowserRouter([
    {
     path: getRoutePath(APPS.USERS, "teacher-interactive"),
     element: <TeacherInteractive />,
+  },
+  {
+    path: getRoutePath(APPS.USERS, "login"),
+    element: <Login />,
   },
 ]);
