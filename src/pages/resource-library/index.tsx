@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Search,
-  Filter,
   BookOpen,
   Download,
   Eye,
@@ -24,10 +23,8 @@ import {
   Share2,
   MoreVertical,
   Play,
-  Clock,
   TrendingUp,
   Award,
-  Users,
   Check,
 } from "lucide-react";
 
@@ -49,11 +46,11 @@ interface Resource {
   verified: boolean;
 }
 
-interface FilterState {
-  subjects: string[];
-  grades: string[];
-  types: string[];
-}
+// interface FilterState {
+//   subjects: string[];
+//   grades: string[];
+//   types: string[];
+// }
 
 const ResourceLibrary: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -61,11 +58,11 @@ const ResourceLibrary: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [filters, setFilters] = useState<FilterState>({
-    subjects: [],
-    grades: [],
-    types: [],
-  });
+  // const [filters, setFilters] = useState<FilterState>({
+  //   subjects: [],
+  //   grades: [],
+  //   types: [],
+  // });
 
   const resources: Resource[] = [
     {
