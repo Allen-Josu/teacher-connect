@@ -46,23 +46,12 @@ interface Resource {
   verified: boolean;
 }
 
-// interface FilterState {
-//   subjects: string[];
-//   grades: string[];
-//   types: string[];
-// }
-
 const ResourceLibrary: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [searchQuery, setSearchQuery] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  // const [filters, setFilters] = useState<FilterState>({
-  //   subjects: [],
-  //   grades: [],
-  //   types: [],
-  // });
 
   const resources: Resource[] = [
     {
@@ -274,7 +263,7 @@ const ResourceLibrary: React.FC = () => {
         <aside
           className={`${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } lg:translate-x-0 fixed lg:static w-64 bg-white h-[calc(100vh-4rem)] shadow-lg transition-transform duration-300 z-40 overflow-y-auto`}
+          } lg:translate-x-0 fixed w-64 bg-white top-16 left-0 h-[calc(100vh-4rem)] shadow-lg transition-transform duration-300 z-40 overflow-y-auto`}
         >
           <div className="p-6">
             {/* Categories */}
@@ -399,7 +388,7 @@ const ResourceLibrary: React.FC = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 lg:ml-0">
+        <main className="flex-1 p-6 lg:ml-64">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="mb-8">
