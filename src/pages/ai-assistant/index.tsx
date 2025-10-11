@@ -50,7 +50,7 @@ const grades = [
 ];
 
 const AIAssistant: React.FC = () => {
-  const { engine, loading, progress, retrieveContext } = useAIEngine();
+  const { engine, loading, retrieveContext } = useAIEngine();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showLessonPlanForm, setShowLessonPlanForm] = useState(false);
