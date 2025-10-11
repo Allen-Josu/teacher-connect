@@ -1,19 +1,44 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+
+interface Student {
+  name: string;
+  class: string;
+  school: string;
+  village: string;
+  roll: string;
+  dob: string;
+  contact: string;
+  subjects: string[];
+  attendance: string;
+  avatar: string;
+}
 
 export default function StudentProfile() {
-  // Example data; you can fetch from IndexedDB or local storage for offline use
-  const [student, setStudent] = useState({
-    name: 'Rahul Sharma',
-    class: '9th Grade',
-    school: 'Rural Govt. High School',
-    village: 'Rampur, UP',
-    roll: '2022RLS109',
-    dob: '14 July 2011',
-    contact: '9876543210',
-    subjects: ['Science', 'Math', 'Hindi', 'English'],
-    attendance: '92%',
-    avatar: 'https://ui-avatars.com/api/?name=Rahul+Sharma',
-  });
+  const [student, setStudent] = useState<Student | undefined>();
+
+  useEffect(() => {
+    setStudent({
+      name: "Rahul Sharma",
+      class: "9th Grade",
+      school: "Rural Govt. High School",
+      village: "Rampur, UP",
+      roll: "2022RLS109",
+      dob: "14 July 2011",
+      contact: "9876543210",
+      subjects: ["Science", "Math", "Hindi", "English"],
+      attendance: "92%",
+      avatar: "https://ui-avatars.com/api/?name=Rahul+Sharma",
+    });
+  }, []);
+
+  // Add a loading state check
+  if (!student) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 flex items-center justify-center py-8 px-4">
@@ -28,7 +53,9 @@ export default function StudentProfile() {
         </div>
         {/* Student Details */}
         <div className="text-center mb-2">
-          <h2 className="text-2xl font-bold text-violet-700 mb-1">{student.name}</h2>
+          <h2 className="text-2xl font-bold text-violet-700 mb-1">
+            {student.name}
+          </h2>
           <span className="inline-block bg-fuchsia-200 text-fuchsia-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">
             Student
           </span>
@@ -61,7 +88,7 @@ export default function StudentProfile() {
           <div className="flex justify-between">
             <span>Subjects:</span>
             <span className="text-violet-700">
-              {student.subjects.join(', ')}
+              {student.subjects.join(", ")}
             </span>
           </div>
           <div className="flex justify-between">
