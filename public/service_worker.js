@@ -1,6 +1,13 @@
 const CACHE_NAME = "version-1";
-const urlsToCache = ["index.html", "offline.html"];
-
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/offline.html',
+  '/ai-assistant',
+  '/css/main.css',
+  '/js/main.js',
+  // Add other critical assets like images, fonts
+];
 const self = this;
 
 // Install SW
@@ -40,3 +47,5 @@ self.addEventListener("activate", (event) => {
     )
   );
 });
+
+
