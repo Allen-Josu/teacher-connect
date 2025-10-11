@@ -13,8 +13,6 @@ import {
   X,
   Search,
   FileText,
-  Video,
-  Image,
   Calendar,
   MessageSquare,
   TrendingUp,
@@ -49,6 +47,10 @@ interface Resource {
 const TeacherDashboard: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [isOnline, setIsOnline] = useState(true);
+
+  if (isOnline == false) {
+    setIsOnline(false);
+  }
 
   const quickActions: QuickAction[] = [
     {
